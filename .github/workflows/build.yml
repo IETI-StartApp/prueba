@@ -19,7 +19,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: rm -rf node_modules && yarn install --frozen-lockfile
       - run: yarn build
-      - run: yarn test --coverage --collectCoverageFrom=src/ collectCoverageFrom='!src//*.index.jsx'
+      - run: yarn test --passWithNoTests --coverage --collectCoverageFrom=src/ collectCoverageFrom='!src//*.index.jsx'
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
