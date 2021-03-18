@@ -1,0 +1,15 @@
+import firebase from "firebase/app"
+import "firebase/auth"
+
+const app = firebase.initializeApp({
+    apiKey: "AIzaSyDXFkZds0jUiaZri0k9zKlSX22E2vEdUPo",
+    authDomain: "media-meet.firebaseapp.com",
+    databaseURL: "https://media-meet.firebaseio.com",
+    projectId: "media-meet",
+    storageBucket: "media-meet.appspot.com",
+    messagingSenderId: "111873862231",
+    appId: "1:111873862231:web:34669ec693875b36791112"
+});
+
+export const Auth = app.auth()
+export default app
